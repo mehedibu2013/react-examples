@@ -1,0 +1,26 @@
+# Ignore node_modules folder
+node_modules/
+
+# Ignore build artifacts
+build/
+dist/
+
+# Ignore IDE files
+.vscode/
+.idea/
+
+# Ignore operating system files
+.DS_Store
+Thumbs.db
+
+# Ignore logs
+logs/
+
+# Ignore npm logs
+npm-debug.log*
+
+# Ignore yarn logs
+yarn-error.log*
+
+# Ignore React build files
+react-scripts-build.log

@@ -44,7 +44,7 @@ checkbox-tree/
 ### 📥 Installation
 
 ```bash
-git clone https://github.com/mehedibu2013/react-practice.git
+git clone https://github.com/mehedibu2013/react-examples.git
 cd checkbox-tree
 npm install
 ````

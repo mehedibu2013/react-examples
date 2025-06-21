@@ -20,7 +20,8 @@ checkbox-tree/
 ├── public/
 │   └── index.html          # Root HTML file
 ├── src/
-│   ├── CheckboxTree.jsx    # Main component
+│   ├── App.js              # Root App component
+│   ├── CheckboxTree.jsx    # Checkbox tree component
 │   ├── data.js             # Tree data
 │   └── index.js            # React entry point
 ├── package.json
@@ -72,8 +73,4 @@ This project is licensed under the [MIT License](LICENSE).
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ---
-
-Let me know if you'd like help deploying this to GitHub Pages or Vercel.
-
-```
 

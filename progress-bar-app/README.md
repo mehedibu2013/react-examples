@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# React Progress Bar Example
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple and elegant React app that dynamically adds animated progress bars that fill from 0% to 100%.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📝 Description
 
-### `npm start`
+This is a minimal React application demonstrating how to create dynamic, animated progress bars using React hooks and CSS transitions.  
+Each time you click the **Add** button, a new progress bar appears and fills up smoothly over 2 seconds.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🧩 Features
 
-### `npm test`
+- Add as many progress bars as you want.
+- Each bar animates independently.
+- Smooth 2-second fill animation using CSS transitions.
+- Easily extendable for further customization.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🚀 Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Node.js](https://nodejs.org/) installed (v14 or higher recommended)
+- npm or yarn package manager
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. Clone the main repository:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/mehedibu2013/react-examples.git
+cd react-examples
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Navigate into this example:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+cd progress-bar-app
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Install dependencies:
 
-## Learn More
+```bash
+npm install
+# or
+yarn install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Run the App
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+# or
+yarn start
+```
 
-### Code Splitting
+Open [http://localhost:3000](http://localhost:3000) in your browser to view it.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 📁 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+progress-bar-app/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── ProgressBar.jsx
+│   │   └── ProgressBar.css
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+│   └── index.css
+├── package.json
+└── README.md
+```
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 💡 How It Works
 
-### Advanced Configuration
+- The `App` component maintains an array of progress bar IDs in state.
+- When the **Add** button is clicked, a new ID is added to the array.
+- Each `ProgressBar` component mounts and starts an animation using `useState` and `useEffect`.
+- CSS transitions animate the width change smoothly over 2 seconds.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🔧 Future Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Add percentage label inside each progress bar.
+- Allow customization of animation duration via props.
+- Add "Pause", "Resume", and "Remove" functionality per bar.
+- Include a "Clear All" button.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---

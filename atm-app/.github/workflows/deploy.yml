@@ -17,9 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: "18"
           cache: "npm"
@@ -29,10 +29,15 @@ jobs:
       - name: Build
         working-directory: ./atm-app
         run: npm run build
+      - name: Configure GitHub Pages
+        run: |
+          mkdir -p ./gh-pages
+          cp -r ./atm-app/build/* ./gh-pages/
+          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ./atm-app/build
+          path: ./gh-pages
 
   deploy:
     environment:

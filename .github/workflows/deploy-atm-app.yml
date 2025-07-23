@@ -2,7 +2,7 @@ name: Deploy ATM App to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
     paths:
       - 'atm-app/**'
   workflow_dispatch:
@@ -15,31 +15,27 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./atm-app
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '18'
           cache: 'npm'
           cache-dependency-path: './atm-app/package-lock.json'
       - name: Install dependencies
+        working-directory: ./atm-app
         run: npm install
       - name: Build
+        working-directory: ./atm-app
         run: npm run build
-      - name: Copy build to GitHub Pages directory
-        run: |
-          mkdir -p ../gh-pages/atm-app
-          cp -r build/* ../gh-pages/atm-app/
-        
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: ./gh-pages
+          path: ./atm-app/build
 
   deploy:
     environment:
@@ -50,4 +46,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4

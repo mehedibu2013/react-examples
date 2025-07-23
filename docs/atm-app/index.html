@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATM Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f0f4f8;
+    }
+    .container {
+      max-width: 600px;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    h1 {
+      color: #2563eb;
+    }
+    p {
+      margin-bottom: 1.5rem;
+    }
+    .atm {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .atm-header {
+      background-color: #2563eb;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .atm-content {
+      padding: 2rem;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .atm-screen {
+      background-color: #f0f4f8;
+      border-radius: 4px;
+      padding: 1.5rem;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .atm-keypad {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+      width: 100%;
+    }
+    .atm-key {
+      background-color: #e5e7eb;
+      border: none;
+      border-radius: 4px;
+      padding: 0.75rem;
+      font-size: 1.25rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .atm-key:hover {
+      background-color: #d1d5db;
+    }
+    .balance {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #10b981;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>ATM Application</h1>
+    <p>A React-based ATM prototype application with a modern UI built using Tailwind CSS.</p>
+    
+    <div class="atm">
+      <div class="atm-header">
+        <h2>Bank ATM</h2>
+        <p>24/7 Banking Services</p>
+      </div>
+      <div class="atm-content">
+        <div class="atm-screen">
+          <p>Current Balance</p>
+          <div class="balance">$1,500.00</div>
+        </div>
+        <div class="atm-keypad">
+          <button class="atm-key">1</button>
+          <button class="atm-key">2</button>
+          <button class="atm-key">3</button>
+          <button class="atm-key">4</button>
+          <button class="atm-key">5</button>
+          <button class="atm-key">6</button>
+          <button class="atm-key">7</button>
+          <button class="atm-key">8</button>
+          <button class="atm-key">9</button>
+          <button class="atm-key">*</button>
+          <button class="atm-key">0</button>
+          <button class="atm-key">#</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

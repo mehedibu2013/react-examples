@@ -5,7 +5,7 @@ const ATMPrototype: React.FC = () => {
   const [step, setStep] = useState<'welcome' | 'pin' | 'menu' | 'balance' | 'withdraw' | 'complete'>('welcome');
   const [pin, setPin] = useState<string>('');
   const [amount, setAmount] = useState<string>('');
-  const [balance, setBalance] = useState<number>(1250.75);
+  const [balance, setBalance] = useState<number>(1500.00);
 
   const handlePinSubmit = () => {
     if (pin === '1234') {
